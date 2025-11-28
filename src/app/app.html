@@ -11,7 +11,7 @@
   <div class="site-inner">
     <div class="brand">
       <img ngSrc="/assets/logo-temp.svg" width="40" height="40" alt="Temporary logo" />
-      <span class="brand-title">Mini Shop</span>
+      <span class="brand-title">THE Shop</span>
     </div>
 
     <nav aria-label="Main navigation" class="navbar">
@@ -22,10 +22,10 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto p-4">
-  <!-- page content rendered here -->
+<main class="flex-grow max-w-4xl mx-auto p-4">
+  <router-outlet />
 </main>
-
+<footer  class="fixed bottom-0 left-0 w-full p-2 text-center text-slate-500 bg-slate-100">@2025 THE Shop</footer>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -36,4 +36,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
+

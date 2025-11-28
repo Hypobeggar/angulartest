@@ -14,13 +14,15 @@ import type { Product } from './product.model';
       class="border rounded-lg bg-white p-4 shadow-sm flex flex-col"
       aria-label="Product card"
     >
-      <img
-        [ngSrc]="product()?.image ?? ''"
-        width="300"
-        height="300"
-        [attr.alt]="product()?.name ?? ''"
-        class="mb-4 rounded"
-      />
+      <div class="media mb-4 rounded">
+        <img
+          [ngSrc]="product()?.image ?? ''"
+          width="300"
+          height="300"
+          [attr.alt]="product()?.name ?? ''"
+          class="media-img"
+        />
+      </div>
 
       <h2 class="text-lg font-semibold">{{ product()?.name }}</h2>
       <p class="text-slate-700 mb-4">$ {{ product()?.price }}</p>
@@ -35,6 +37,24 @@ import type { Product } from './product.model';
     </article>
   `,
   imports: [NgOptimizedImage],
+  styles: [
+    `
+      .media {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* keep a consistent square area */
+        overflow: hidden;
+        display: block;
+        background: #f3f4f6; /* neutral fallback */
+      }
+
+      .media-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover; /* crop images to fit the area */
+      }
+    `,
+  ],
   host: { class: 'block' },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
