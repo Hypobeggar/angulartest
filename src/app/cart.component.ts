@@ -17,7 +17,7 @@ interface CartItem {
     } @else {
       <ul class="space-y-3">
         @for (item of cart(); track item.id) {
-          <li class="border rounded bg-white p-3 flex items-center justify-between">
+          <li class="cart-item border rounded bg-white p-3 flex items-center justify-between">
             <div>
               <div class="font-semibold">{{ item.name }}</div>
               <div class="text-sm text-slate-500">\${{ item.price }}</div>
@@ -35,7 +35,8 @@ interface CartItem {
           </li>
         }
       </ul>
-      <div class="mt-4">
+      <div class="mt-4 flex items-center gap-3">
+        <div class="ml-auto"></div>
         <button
           class="px-3 py-1 rounded bg-slate-800 text-white"
           type="button"
@@ -43,10 +44,19 @@ interface CartItem {
         >
           Clear cart
         </button>
+
+        <button
+          class="px-3 py-1 rounded bg-amber-600 text-white"
+          type="button"
+          aria-disabled="true"
+        >
+          Purchase
+        </button>
       </div>
     }
   `,
   host: { class: 'block' },
+  styleUrls: ['./cart.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartComponent {

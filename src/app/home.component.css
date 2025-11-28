@@ -1,0 +1,38 @@
+.home-section { 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    text-align:center; }
+
+.carousel { display:flex; 
+    gap:1rem; 
+    align-items:center; 
+    flex-direction:column; 
+    position:relative; }
+.carousel-frame { width:360px; 
+    aspect-ratio:1/1; 
+    overflow:hidden; 
+    border-radius:0.5rem; 
+    background:#f3f4f6; }
+.carousel-image { 
+    width:100%; 
+    height:100%; 
+    object-fit:cover; 
+    display:block; }
+
+.carousel-btn { 
+    position:absolute; 
+    top:50%; 
+    transform:translateY(-50%); 
+    background:rgba(0,0,0,0.6); 
+    color:white; border:0; 
+    width:36px; 
+    height:36px; 
+    border-radius:999px; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; }
+.carousel-btn.prev { 
+    left:-18px; }
+.carousel-btn.next { 
+    right:-18px; }
