@@ -1,2 +1,49 @@
 
 /* Keep component-scoped styles small — global styles and Tailwind live in src/styles.css */
+
+.site-header {
+	background: #E75A19; /* burnt orange */
+	color: white;
+}
+
+.site-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0.5em; /* user requested padding */
+	box-sizing: border-box;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.brand-title {
+	font-weight: 700;
+}
+
+.navbar {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.nav-link {
+	color: white;
+	padding: 0.5em; /* user requested padding */
+	text-decoration: none;
+	border-radius: 0.25rem;
+}
+
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+	background: rgba(255,255,255,0.12);
+}
+
+.cart-count {
+	font-weight: 700;
+	margin-left: 0.125rem;
+}

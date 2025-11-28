@@ -3,8 +3,10 @@ import {
   ChangeDetectionStrategy,
   signal,
   computed,
+  inject,
 } from '@angular/core';
 import { ProductCardComponent } from './product-card.component';
+import { CartService } from './cart.service';
 import { Product } from './product.model';
 
 @Component({
@@ -37,10 +39,13 @@ export class ProductsComponent {
     { id: 3, name: 'Pencil Set', price: 3.49, image: '/assets/pencils.jpg' },
   ]);
 
-  cart = signal<Product[]>([]);
-  cartCount = computed(() => this.cart().length);
+  private readonly cartService = inject(CartService);
+
+  get cartCount() {
+    return this.cartService.count;
+  }
 
   addToCart(product: Product) {
-    this.cart.update((list) => [...list, product]);
+    this.cartService.add(product);
   }
 }

@@ -7,12 +7,23 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<header class="site-header">
+  <div class="site-inner">
+    <div class="brand">
+      <img ngSrc="/assets/logo-temp.svg" width="40" height="40" alt="Temporary logo" />
+      <span class="brand-title">Mini Shop</span>
+    </div>
+
+    <nav aria-label="Main navigation" class="navbar">
+      <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
+      <a routerLink="/cart" routerLinkActive="active" class="nav-link">Cart (<span class="cart-count">{{ cartCount() }}</span>)</a>
+    </nav>
+  </div>
+</header>
+
 <main class="max-w-4xl mx-auto p-4">
-  <nav aria-label="Main navigation" class="navbar">
-    <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
-    <a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
-    <a routerLink="/cart" routerLinkActive="active" class="nav-link">Cart</a>
-  </nav>
+  <!-- page content rendered here -->
 </main>
 
 
