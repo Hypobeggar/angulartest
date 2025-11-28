@@ -2,23 +2,27 @@
     display:flex; 
     flex-direction:column; 
     align-items:center; 
-    text-align:center; }
+    text-align:center; 
+}
 
 .carousel { display:flex; 
     gap:1rem; 
     align-items:center; 
     flex-direction:column; 
-    position:relative; }
+    position:relative; 
+}
 .carousel-frame { width:360px; 
     aspect-ratio:1/1; 
     overflow:hidden; 
     border-radius:0.5rem; 
-    background:#f3f4f6; }
+    background:#f3f4f6; 
+}
 .carousel-image { 
     width:100%; 
     height:100%; 
     object-fit:cover; 
-    display:block; }
+    display:block; 
+}
 
 .carousel-btn { 
     position:absolute; 
@@ -29,10 +33,15 @@
     width:36px; 
     height:36px; 
     border-radius:999px; 
-    display:flex; 
     align-items:center; 
-    justify-content:center; }
+    justify-content:center; 
+}
+#carouselSpace{
+    min-width: 30vw;
+}
 .carousel-btn.prev { 
-    left:-18px; }
+
+}
 .carousel-btn.next { 
-    right:-18px; }
+
+}

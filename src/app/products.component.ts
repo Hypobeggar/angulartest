@@ -36,7 +36,7 @@ export class ProductsComponent {
   products = signal<Product[]>([
     { id: 1, name: 'The Reddest Mug', price: 12.99, image: '/assets/mug.jpg' },
     { id: 2, name: 'Spell Tome', price: 5.99, image: '/assets/notebook.jpg' },
-    { id: 3, name: 'Cool Pencil', price: 3.49, image: '/assets/pencils.jpg' },
+    { id: 3, name: 'Cool Pencil', price: 3.49, image: '/assets/pencil.jpg' },
   ]);
 
   private readonly cartService = inject(CartService);

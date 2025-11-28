@@ -11,30 +11,32 @@ import type { Product } from './product.model';
       <p class="text-lg mb-6 text-center max-w-prose">
         Discover our selection of products and add them to your cart. Happy shopping!
       </p>
+        <div id=carouselSpace class="relative flex items-center justify-center">
+          <button (click)="prev()" aria-label="Previous" class="absolute left-0 carousel-btn prev">‹</button>
 
-      <div class="carousel" aria-roledescription="carousel" aria-live="polite">
-        <div class="carousel-frame" role="group" aria-label="Featured product">
-          <img
-            [ngSrc]="current()?.image ?? ''"
-            width="360"
-            height="360"
-            [attr.alt]="current()?.name ?? ''"
-            class="carousel-image"
-          />
+          <div class="carousel" aria-roledescription="carousel" aria-live="polite">
+            <div class="carousel-frame" role="group" aria-label="Featured product">
+            <img
+              [ngSrc]="current()?.image ?? ''"
+              width="360"
+              height="360"
+              [attr.alt]="current()?.name ?? ''"
+              class="carousel-image"
+            />
+          </div>
+
+          <div class="carousel-caption">
+            <div class="font-semibold">{{ current()?.name }}</div>
+            <div class="text-sm text-slate-600">$ {{ current()?.price }}</div>
+          </div>
         </div>
-
-        <div class="carousel-caption">
-          <div class="font-semibold">{{ current()?.name }}</div>
-          <div class="text-sm text-slate-600">$ {{ current()?.price }}</div>
-        </div>
-
-        <button (click)="prev()" aria-label="Previous" class="carousel-btn prev">‹</button>
-        <button (click)="next()" aria-label="Next" class="carousel-btn next">›</button>
+        
+        <button (click)="next()" aria-label="Next" class="absolute right-0 carousel-btn next">›</button>
       </div>
     </section>
   `,
   imports: [NgOptimizedImage],
-    styleUrls: ['./home.component.css'],
+  styleUrls: [`./home.component.css`],
   host: { class: 'block' },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -43,7 +45,7 @@ export class HomeComponent implements OnDestroy {
   private readonly products = [
     { id: 1, name: 'The Reddest Mug', price: 12.99, image: '/assets/mug.jpg' },
     { id: 2, name: 'Spell Tome', price: 5.99, image: '/assets/notebook.jpg' },
-    { id: 3, name: 'Cool Pencil', price: 3.49, image: '/assets/pencils.jpg' },
+    { id: 3, name: 'Cool Pencil', price: 3.49, image: '/assets/pencil.jpg' },
   ] as Product[];
 
   idx = signal(0);

@@ -12,7 +12,7 @@
 	justify-content: space-between;
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 0.5em; /* user requested padding */
+	padding: 0.5em; 
 	box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@
 
 .nav-link {
 	color: white;
-	padding: 0.5em; /* user requested padding */
+	padding: 0.5em;
 	text-decoration: none;
 	border-radius: 0.25rem;
 }
@@ -47,13 +47,9 @@
 	font-weight: 700;
 	margin-left: 0.125rem;
 }
-:host {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
+
 
 main{
-    margin: 1.5em;
     width: 90vw;
+    background-color: #FAF9F6;
 }
