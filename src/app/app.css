@@ -1,1 +1,2 @@
-@import "tailwindcss";
+
+/* Keep component-scoped styles small — global styles and Tailwind live in src/styles.css */
