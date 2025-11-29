@@ -11,7 +11,7 @@ import type { Product } from './product.model';
       <p class="text-lg mb-6 text-center max-w-prose">
         Discover our selection of products and add them to your cart. Happy shopping!
       </p>
-        <div id=carouselSpace class="relative flex items-center justify-center">
+        <div id=carouselSpace class="relative flex gap-4 items-center justify-center">
           <button (click)="prev()" aria-label="Previous" class="absolute left-0 carousel-btn prev">‹</button>
 
           <div class="carousel" aria-roledescription="carousel" aria-live="polite">

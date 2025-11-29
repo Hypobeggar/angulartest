@@ -15,7 +15,7 @@
     </div>
 
     <nav aria-label="Main navigation" class="navbar">
-      <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/" routerLinkActive="active" class="nav-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
       <a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
       <a routerLink="/cart" routerLinkActive="active" class="nav-link">Cart (<span class="cart-count">{{ cartCount() }}</span>)</a>
     </nav>

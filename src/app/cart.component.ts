@@ -35,10 +35,10 @@ interface CartItem {
           </li>
         }
       </ul>
-      <div class="mt-4 flex items-center gap-3">
+      <div id="cart-buttons" class="mt-4 p-3 flex items-center gap-3">
         <div class="ml-auto"></div>
         <button
-          class="px-3 py-1 rounded bg-slate-800 text-white"
+          class="px-5 py-2 rounded bg-slate-800 text-white"
           type="button"
           (click)="clear()"
         >
@@ -46,7 +46,7 @@ interface CartItem {
         </button>
 
         <button
-          class="px-3 py-1 rounded bg-amber-600 text-white"
+          class="px-5 py-2 rounded bg-amber-600 text-white"
           type="button"
           aria-disabled="true"
         >

@@ -16,6 +16,7 @@
     overflow:hidden; 
     border-radius:0.5rem; 
     background:#f3f4f6; 
+    
 }
 .carousel-image { 
     width:100%; 
@@ -25,19 +26,16 @@
 }
 
 .carousel-btn { 
-    position:absolute; 
-    top:50%; 
-    transform:translateY(-50%); 
+    position:relative; 
     background:rgba(0,0,0,0.6); 
     color:white; border:0; 
     width:36px; 
     height:36px; 
     border-radius:999px; 
-    align-items:center; 
-    justify-content:center; 
 }
 #carouselSpace{
     min-width: 30vw;
+
 }
 .carousel-btn.prev { 
 
