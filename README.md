@@ -2,6 +2,14 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
 
+## Description
+This project is a small online shop with a shopping cart using Angular, Tailwind CSS, and Vercel Deployment.
+
+## Cloud Deployment
+https://angulartest-five.vercel.app/
+
+
+
 ## Development server
 
 To start a local development server, run:
